@@ -26,6 +26,8 @@
 #include <ntk/utils/opencv_utils.h>
 #include "PoseRecognizer.h"
 
+using namespace cv;
+
 namespace Ui {
     class RawImagesWindow;
 }

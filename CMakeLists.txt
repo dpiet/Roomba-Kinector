@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
-PROJECT(Roomba-Kinector)
+PROJECT(skeletor)
 
 FIND_PACKAGE (Qt4 REQUIRED)
 
@@ -12,8 +12,6 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
 QT4_WRAP_CPP(maoc_sources
   GuiController.h
   RawImagesWindow.h
-  PoseRecognizer.h
-  roomba.h
 )
 
 QT4_WRAP_UI(uaic_sources
@@ -34,8 +32,7 @@ SET(rgbd_skeletor_sources ${maoc_sources} ${uaic_sources}
                skeletor.cpp
                RawImagesWindow.h RawImagesWindow.cpp
                GuiController.cpp GuiController.h
-               PoseRecognizer.cpp PoseRecognizer.h
-	       roomba.cpp roomba.h)
+               PoseRecognizer.cpp PoseRecognizer.h)
 
 IF (BUILD_MACOSX_BUNDLE)
    ADD_EXECUTABLE(rgbd-skeletor MACOSX_BUNDLE ${rgbd_skeletor_sources}) 

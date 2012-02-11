@@ -14,8 +14,6 @@ Date: August 19, 2011
 #include <ntk/utils/opencv_utils.h>
 #include <string>	
 
-using namespace cv;
-
 class PoseRecognizer
 {
 
@@ -23,7 +21,7 @@ public:
     PoseRecognizer();
     ~PoseRecognizer();
 	void setSkeleton(const ntk::RGBDImage& image);
-	std::string recognizePose();
+    string recognizePose();
 
 private:
     bool isLeftArmStraightOut;
@@ -33,7 +31,7 @@ private:
     //GuiController& m_controller;
 	vector<cv::Point3f> jointPos;
 	bool left,right,forward,stop;
-	std::string pose;
+	string pose;
 	int epsilon;
 	
 

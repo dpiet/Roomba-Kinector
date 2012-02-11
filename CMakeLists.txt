@@ -12,6 +12,7 @@ INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR})
 QT4_WRAP_CPP(maoc_sources
   GuiController.h
   RawImagesWindow.h
+  PoseRecognizer.h
 )
 
 QT4_WRAP_UI(uaic_sources
